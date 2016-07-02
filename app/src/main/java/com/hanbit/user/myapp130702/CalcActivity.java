@@ -47,16 +47,42 @@ public class CalcActivity extends Activity implements View.OnClickListener{
                 this.startActivity(new Intent(this,MainActivity.class));
             break;
 
-
-            case R.id.btDivide :
+            case R.id.btPlus :
                 int num1,num2,num3;
+                num1 = Integer.parseInt( et1.getText().toString()); //et1문자열에서 int형변환
+                num2 = Integer.parseInt( et2.getText().toString());
+                num3 = num1 + num2;
+
+                tvResult.setText(Integer.toString(num3));//출력
+
+                break;
+            case R.id.btMinus :
+
                 num1 = Integer.parseInt( et1.getText().toString());
                 num2 = Integer.parseInt( et2.getText().toString());
+                num3 = num1 - num2;
 
-                num3 = num1 + num2;
                 tvResult.setText(Integer.toString(num3));
-            break;
 
+                break;
+            case R.id.btMulti :
+
+                num1 = Integer.parseInt( et1.getText().toString());
+                num2 = Integer.parseInt( et2.getText().toString());
+                num3 = num1 * num2;
+
+                tvResult.setText(Integer.toString(num3));
+
+                break;
+            case R.id.btDivide :
+
+                num1 = Integer.parseInt( et1.getText().toString());
+                num2 = Integer.parseInt( et2.getText().toString());
+                num3 = num1 / num2;
+
+                tvResult.setText(Integer.toString(num3));
+
+                break;
         }
     }
 

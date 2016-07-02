@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
-    Button btCalc,btCalender;
+    Button btCalc,btCalender,btimageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //생성
@@ -17,9 +17,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         btCalc= (Button) findViewById(R.id.btCalc);
         btCalender= (Button) findViewById(R.id.btCalender);
-
+        btimageview= (Button) findViewById(R.id.btimageview);
         btCalc.setOnClickListener(this);
         btCalender.setOnClickListener(this);
+        btimageview.setOnClickListener(this);
 
     }
 
@@ -34,6 +35,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
             case R.id.btCalender :
                 this.startActivity(new Intent(this,calenderactvty.class));
+                break;
+
+            case R.id.btimageview :
+                this.startActivity(new Intent(this,imageActivity.class));
                 break;
         }
 
